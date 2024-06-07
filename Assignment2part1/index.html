@@ -108,12 +108,14 @@
       <h1>Mozilla</h1>
       <!-- insert <img> element, link to the small
           version of the Firefox logo -->
+      <img src="photos/firefoxlogo120.png" alt="firefox logo">
 
     </header>
 
     <main>
       <article>
         <!-- insert iframe from youtube -->
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/ojcNcvb1olg" frameborder="0" allowfullscreen></iframe>
 
         <h2>Rocking the free web</h2>
 
@@ -125,13 +127,20 @@
       <div class="further-info">
         <!-- insert images with srcsets and sizes -->
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img>
+          <img srcset="photos/firefoxlogo120.png 120w,
+          photos/firefoxlogo400.png 400w"
+          sizes = "(max-width: 500px) 120px, 400px"
+          src = "photos/firefoxlogo400.png" alt="firefox logo">
         </a>
         <a href="https://www.mozilla.org/">
-          <img>
+          <img srcset="photos/mozilladinosaurhead120.png 120w,
+          photos/mozilladinosaurhead400.png 400w"
+          sizes = "(max-width: 500px) 120px, 400px"
+          src = "photos/mozilladinosaurhead400.png" alt="Dianosaur's head photo">
         </a>
         <a href="https://addons.mozilla.org/">
-          <img>
+          <img srcset="photos/firefoxaddons120.jpg 120w,
+          photos/firefoxaddons400.jpg 400w">
         </a>
         <a href="https://developer.mozilla.org/en-US/">
           <img>
