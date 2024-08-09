@@ -1,3 +1,9 @@
+/*
+  Name: Virendrasinh Chauhan
+  File: main.js
+  Date: 09 august 2024
+  Description - This file have javascript for the website.
+*/
 // functionality for showing/hiding the comments section
 
 const showHideBtn = document.querySelector('.show-hide');
