@@ -10,8 +10,18 @@ const showHideBtn = document.querySelector('.show-hide');
 const commentWrapper = document.querySelector('.comment-wrapper');
 
 commentWrapper.style.display = 'none';
+showHideBtn.setAttribute('tabindex', '0');
 
 showHideBtn.onclick = function() {
+  toggleComments();  
+};
+showHideBtn.onkeypress = function(event){
+  if (event.key === 'Enter'){
+    toggleComments();
+  }
+};
+
+function toggleComments(){
   let showHideText = showHideBtn.textContent;
   if(showHideText === 'Show comments') {
     showHideBtn.textContent = 'Hide comments';
@@ -32,9 +42,10 @@ const list = document.querySelector('.comment-container');
 form.onsubmit = function(e) {
   e.preventDefault();
   submitComment();
-};
+}
 
-function submitComment() {
+
+function submitComment(){
   const listItem = document.createElement('li');
   const namePara = document.createElement('p');
   const commentPara = document.createElement('p');
@@ -47,7 +58,9 @@ function submitComment() {
   list.appendChild(listItem);
   listItem.appendChild(namePara);
   listItem.appendChild(commentPara);
+ 
 
   nameField.value = '';
   commentField.value = '';
-}
+};
+
